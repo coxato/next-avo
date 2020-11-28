@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "jsx": "react",
+        "paths": {
+            "@database": ["/database/db.js"],
+            "@components/*": ["/components/*"]
+        },
+        "target": "es6",
+        "module": "commonjs"
+    },
+    "exclude": ["node_modules"]
+}
