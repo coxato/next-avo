@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    justify-content: center;
+    padding: 25px 175px;
+}
+
+.wrapper{
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.left{
+    padding: 10px;
+}
+
+.right{
+    padding: 10px;
+}
+
+.image{
+    width: 100%;
+}
+
+.name{
+    font-size: 24px;
+}
+
+.sectionTitle{
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px){
+    .container{
+        padding: 15px 120px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        padding: 15px 30px;
+    }
+}

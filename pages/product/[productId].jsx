@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-
+import ProductDetail from '@components/ProductDetail/productDetail';
+import AddToCart from '@components/Cart/addtoCart';
+import Layout from '@components/Layouts/layout';
 
 const ProductItem = () => {
 
@@ -16,19 +18,18 @@ const ProductItem = () => {
     }, []);
 
     return ( 
-        <div>
-            <h2>product item page for: {productId}</h2>
+        <Layout>
             {
                 product ? (
                     <div>
-                        <h1>{product.name}</h1>
-                        <h1>{product.price}</h1>
+                        <ProductDetail {...product} />
+                        <AddToCart product={product} />
                     </div>
                 ) : (
                     'sorry, this product does not exists'
                 )
             }
-        </div>
+        </Layout>
      );
 }
  

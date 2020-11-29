@@ -4,6 +4,7 @@
         "jsx": "react",
         "paths": {
             "@database": ["/database/db.js"],
+            "@store/*": ["/store/*"],
             "@components/*": ["/components/*"]
         },
         "target": "es6",

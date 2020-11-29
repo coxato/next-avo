@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import ProductList from '@components/ProductList/productList';
+import Layout from '@components/Layouts/layout';
 
 const Home = () => {
     const [productsList, setProductsList] = useState([]);
@@ -11,23 +12,21 @@ const Home = () => {
     }, []);
 
     return ( 
-        <div>
-            <h1>Hi!</h1>
-            <h3>I'm using next js</h3>
-            <p>it's cool</p>
-            <a href="/about">go to about page</a>
+        <Layout>
+            <h1 className="title">Avos Store</h1>
+            
             <div className="avos">
-                <ul>
-                    {productsList.map( ({name, id}) => (
-                        <li key={id}>
-                            <Link href={`/product/${id}`}>
-                                <a>{name}</a>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <ProductList products={productsList} />
             </div>
-        </div>
+
+            <style jsx>{`
+                .title{
+                    font-size: 30px;
+                    text-align: center;
+                    margin: 20px 0;
+                }
+            `}</style>
+        </Layout>
      );
 }
  

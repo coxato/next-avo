@@ -1,0 +1,32 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 20px 60px;
+}
+
+/* .productItem{
+    background-color: red;
+} */
+
+.productCard{
+    border-radius: 5px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    padding: 10px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.productCard:hover{
+    transform: translateY(-5px);
+    border-color: rgb(32, 32, 32);
+}
+
+.image{
+    width: 100%;
+}
+
+.name{
+    text-align: center;
+}
