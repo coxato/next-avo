@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ProductDetail from '@components/ProductDetail/productDetail';
-import AddToCart from '@components/Cart/addtoCart';
+import AddToCart from '@components/Cart/addToCart';
 import Layout from '@components/Layouts/layout';
 
 const ProductItem = () => {
