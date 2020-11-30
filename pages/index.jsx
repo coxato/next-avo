@@ -28,18 +28,18 @@ import Layout from '@components/Layouts/layout';
 // }
 
 // Static Site Generation SSG
-// export const getStaticProps = async () => {
-//     const response = await fetch('https://next-avo.vercel.app/api/avo');
-//     const json = await response.json();
-//     const { data: productList } = json;
-//     // siempre debe retornar un objeto con las props que
-//     //  usará el componente
-//     return {
-//         props: {
-//             productList
-//         }
-//     }
-// }
+export const getStaticProps = async () => {
+    const response = await fetch('https://next-avo.vercel.app/api/avo');
+    const json = await response.json();
+    const { data: productList } = json;
+    // siempre debe retornar un objeto con las props que
+    //  usará el componente
+    return {
+        props: {
+            productList
+        }
+    }
+}
 
 //  Server Side Rendering (SSR) vs Static Side Generation (SSG)
 // la diferencia es que con SSR el servidor hace un request a la API cada vez
@@ -48,17 +48,17 @@ import Layout from '@components/Layouts/layout';
 // al usar SSG si los datos que se piden a la API cambiarán o no
 
 
-// const Home = ({ productList }) => {
-const Home = () => {
-    const [productList, setProductList] = useState([]);
+const Home = ({ productList }) => {
+// const Home = () => {
+    // const [productList, setProductList] = useState([]);
 
     // el useEffect siempre se ejecuta en el navegador
     // CSR Client Side Rendering
-    useEffect(() => {
-        fetch('/api/avo')
-            .then( r => r.json() )
-            .then( avos => setProductList(avos.data) )
-    }, []);
+    // useEffect(() => {
+    //     fetch('/api/avo')
+    //         .then( r => r.json() )
+    //         .then( avos => setProductList(avos.data) )
+    // }, []);
 
     
     return ( 

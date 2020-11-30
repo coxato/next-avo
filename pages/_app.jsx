@@ -7,7 +7,7 @@ import '../global.css';
 // this method only works in _app (is this file)
 export const reportWebVitals = metrics => {
     // you can send data for analytics
-    console.log(metrics);
+    // console.log(metrics);
 }
 
 function MyApp({ Component, pageProps }) {
