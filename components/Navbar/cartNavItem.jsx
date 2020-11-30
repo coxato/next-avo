@@ -10,7 +10,7 @@ const CartNavItem = () => {
         <>
             <Basket />
             <span style={{marginLeft: '10px'}}>
-                {totalItems}
+                ({totalItems})
             </span>
         </>
     );

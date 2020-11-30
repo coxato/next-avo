@@ -10,8 +10,10 @@ const AddToCart = ({ product }) => {
     const handleChange = (ev) => setQty(parseInt(ev.target.value));
 
     const handleAdd = () => {
-        addToCart(product, qty);
-        setAdded(true);
+        if(parseInt(qty) > 0){
+            addToCart(product, qty);
+            setAdded(true);
+        }
     }
 
     const handleShowAgain = () => {
@@ -23,10 +25,10 @@ const AddToCart = ({ product }) => {
         <div className={s.container}>
             {
                 !added ? (
-                    <>
+                    <div className={s.inputContainer}>
                         <input 
                             type="number" 
-                            defaultValue={qty}
+                            defaultValue={isNaN(qty) ? 0 : qty}
                             className={s.input}
                             onChange={handleChange}
                         />
@@ -36,9 +38,9 @@ const AddToCart = ({ product }) => {
                         >
                                 Add to Cart
                         </button>
-                    </>
+                    </div>
                 ): (
-                    <>
+                    <div className={s.added}>
                         Added to cart!
                         <div
                             className={s.addAgain}
@@ -46,7 +48,7 @@ const AddToCart = ({ product }) => {
                         >
                             I want to add more!
                         </div>
-                    </>
+                    </div>
                 )
             }
         </div>

@@ -1,24 +1,56 @@
 .container{
-    background-color: rosybrown;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputContainer{
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 15px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px; 
 }
 
 .input{
-    padding: 4px;
+    padding: 10px 20px;
     border-radius: 5px 0 0 5px;
-    border: none;
+    font-size: 20px;
     outline: none;
+    width: 70%;
+    border: 2px solid rgba(61, 61, 61, 0.678);;
+    border-right: none;
 }
 
 .button{
-    background-color: green;
+    background-color: rgb(64, 195, 47);
+    color: rgba(15, 15, 15, 0.883);
     font-size: 20px;
     border-radius: 0 5px 5px 0;
     outline: none;
-    border: none;
+    width: 30%;
+    border: 2px solid rgba(61, 61, 61, 0.678);;
+    /* border-left: none; */
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover{
+    background-color: rgb(54, 163, 40);
+}
+
+.added{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.addAgain{
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
 }

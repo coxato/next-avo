@@ -44,9 +44,9 @@ const useCartMutations = () => {
         )
     }
 
-    const removeFromCart = (item, qty) => {
+    const removeFromCart = (item) => {
         dispatch(
-            cartAction('removeItem', item, qty)
+            cartAction('removeItem', item)
         )
     }
 
